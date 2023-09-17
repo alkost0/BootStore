@@ -31,8 +31,6 @@
                         {% endfor %}
                     </table>
                 </div>
-                <div class="card-footer"><a href="{% url 'boat:boat_view' object.pk %}" class="btn btn-outline-success">Оставить заявку</a></div>
+                <div class="card-footer"><a href="{% url 'order:create' object.pk %}" class="btn btn-outline-success">Оставить заявку</a></div>
             </div>
 {% endblock %}
-
-
