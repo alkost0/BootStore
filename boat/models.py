@@ -17,7 +17,7 @@ class Owner(models.Model):
 class Boat(models.Model):
     name = models.CharField(max_length=50, verbose_name='название')
     year = models.PositiveSmallIntegerField(**NULLABLE, verbose_name='год выпуска')
-
+    price = models.IntegerField(**NULLABLE, verbose_name='цена')
     owner = models.ForeignKey(Owner, on_delete=models.CASCADE, verbose_name='владелец')
     def __str__(self):
         return f'{self.name}'
